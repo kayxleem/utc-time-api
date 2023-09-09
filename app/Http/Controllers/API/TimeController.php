@@ -31,13 +31,6 @@ class TimeController extends Controller
             'github_repo_url' => 'https://github.com/kayxleem/utc-time-api',
             'status_code' => 200,
         ];
-        $response = response()->json($data);
-
-
-
-        $utc_str = gmdate("M d Y H:i:s", time());
-        $utc = strtotime($utc_str);
-        dd($response);
         return response()->json($data);
     }
 
