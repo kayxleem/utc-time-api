@@ -13,7 +13,7 @@ class TimeApiTest extends TestCase
      */
     public function test_time_api_returns_result(): void
     {
-        $response = $this->get('api/');
+        $response = $this->get('api?slack_name=example_name&track=backend');
 
         $response->assertStatus(200);
     }
