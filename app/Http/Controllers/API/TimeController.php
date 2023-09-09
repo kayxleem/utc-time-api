@@ -27,7 +27,7 @@ class TimeController extends Controller
             'current_day' => $current_day,
             'utc_time' => $time,
             'track' => $track,
-            'github_file_url' => 'app\Http\Controllers\API\TimeController.php',
+            'github_file_url' => 'https://github.com/kayxleem/utc-time-api/app/Http/Controllers/API/TimeController.php',
             'github_repo_url' => 'https://github.com/kayxleem/utc-time-api',
             'status_code' => 200,
         ];
