@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Requests\TimeRequest;
 use App\Models\Time;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -14,7 +15,7 @@ class TimeController extends Controller
      *
      * @return Response
      */
-    public function index(Request $request)
+    public function index(TimeRequest $request)
     {
         $slack_name=$request->slack_name;
         $track=$request->track;
