@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Http\Requests\TimeRequest;
 use App\Models\Time;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Carbon;
+use App\Http\Requests\TimeRequest;
 use App\Http\Controllers\Controller;
 
 class TimeController extends Controller
@@ -20,8 +21,7 @@ class TimeController extends Controller
         $slack_name=$request->slack_name;
         $track=$request->track;
 
-
-        $time=date("Y-m-d")."T".date("H:i:s")."Z";
+        $time=Carbon::now()->toIso8601ZuluString();
         $current_day = now()->format('l');
         $data = [
             'slack_name' => $slack_name,
