@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Requests\TimeRequest;
 use App\Models\Time;
+use GrahamCampbell\ResultType\Success;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
@@ -29,9 +30,8 @@ class TimeController extends Controller
             'track' => $track,
             'github_file_url' => 'https://github.com/kayxleem/utc-time-api/app/Http/Controllers/API/TimeController.php',
             'github_repo_url' => 'https://github.com/kayxleem/utc-time-api',
-            'status_code' => 200,
         ];
-        return response()->json($data);
+        return response()->json($data, 200);
     }
 
     /**
